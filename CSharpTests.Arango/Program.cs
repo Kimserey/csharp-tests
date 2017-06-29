@@ -28,6 +28,8 @@ namespace CSharpTests.Arango
 
                 var person = new Person { Name = "Kim", Age = 26 };
 
+                db.u
+
                 // insert new document and creates 'Person' collection on the fly
                 db.Insert<Person>(person);
 
