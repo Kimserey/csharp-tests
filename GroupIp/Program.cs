@@ -112,6 +112,26 @@ namespace GroupIp
             }
 
             Console.ReadKey();
+
+            var values = new[] {
+                new { x = "hello", y = Test.Hello },
+                new { x = "world", y = Test.World },
+                new { x = "hello", y = Test.Hello },
+                new { x = "world", y = Test.Hello },
+            };
+
+            foreach (var v in values.Distinct())
+            {
+                Console.WriteLine("{0} : {1}", v.x, v.y);
+            }
+
+            Console.ReadKey();
+        }
+
+        public enum Test
+        {
+            Hello,
+            World
         }
 
         private static IEnumerable<string> ResolveDataDebug(IEnumerable<Resource> resources, IEnumerable<Resource> visited)
@@ -153,7 +173,8 @@ namespace GroupIp
                                     ?? Enumerable.Empty<Resource>(),
                                 visited.Append(i));
 
-                        return Enumerable.Empty<string>().Append(i.Data);
+                        return Enumerable.Empty<string>()
+                            .Append(i.Data);
                     });
             }
 
