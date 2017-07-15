@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Text.RegularExpressions;
 using System.Threading;
+using Humanizer;
 
 namespace DistinctAny
 {
@@ -9,6 +12,22 @@ namespace DistinctAny
     {
         static void Main(string[] args)
         {
+            var humanized = "ip-access-control".Humanize(LetterCasing.Title).Singularize();
+
+            Regex IdentifierRegex = new Regex(@"^((?!.*//)[a-zA-Z0-9][a-zA-Z0-9/]*[a-zA-Z0-9]|[a-zA-Z0-9\*])$");
+
+            var dates = new DateTimeOffset?[] {
+                new DateTimeOffset(new DateTime(2017, 1, 1)),
+                new DateTimeOffset(new DateTime(2017, 1, 2)),
+                new DateTimeOffset(new DateTime(2017, 1, 3)),
+                null
+            };
+
+            IPAddress address = IPAddress.Parse("1.1.1.1");
+            IPAddress address2 = IPAddress.Parse("1.1.1.1");
+
+            var x = IPAddress.TryParse("1.1.1.1", out IPAddress address3);
+
             var evaluation = "A";
 
             var stw = Stopwatch.StartNew();
