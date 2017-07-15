@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpTests.Arango", "CSharpTests.Arango\CSharpTests.Arango.csproj", "{9F5342A3-620A-4201-BC7F-129C6A51D8BD}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFTest", "EFTest\EFTest.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupIp", "GroupIp\GroupIp.csproj", "{A3F69494-5C09-4230-9CF3-A2E3C763B982}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistinctAny", "DistinctAny\DistinctAny.csproj", "{401D5C29-CABD-4123-A6ED-5CB8053582AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistinctAny", "DistinctAny\DistinctAny.csproj", "{401D5C29-CABD-4123-A6ED-5CB8053582AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{1D798F59-437B-4CDD-BF8B-91B08C1EB5F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{401D5C29-CABD-4123-A6ED-5CB8053582AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401D5C29-CABD-4123-A6ED-5CB8053582AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401D5C29-CABD-4123-A6ED-5CB8053582AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D798F59-437B-4CDD-BF8B-91B08C1EB5F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D798F59-437B-4CDD-BF8B-91B08C1EB5F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D798F59-437B-4CDD-BF8B-91B08C1EB5F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D798F59-437B-4CDD-BF8B-91B08C1EB5F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

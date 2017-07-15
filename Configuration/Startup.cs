@@ -22,6 +22,12 @@ namespace Configuration
     {
         public string Address { get; set; }
         public int Port { get; set; }
+        public Test Test { get; set; }
+    }
+
+    public class Test
+    {
+        public string X { get; set; }
     }
 
     public class Startup
@@ -43,6 +49,11 @@ namespace Configuration
             services.AddTransient<IMyService>(_ => new MyService(Configuration.GetSection("endpoint").Get<Endpoint>()));
             services.AddMvc();
             services.AddOptions();
+            services.Configure<Endpoint>(Configuration.GetSection("endpoint"));
+
+            var port = Configuration.GetSection("endpoint:port").Get<int>();
+            var test1 = Configuration.GetSection("endpoint").Get<Endpoint>();
+            var test2 = Configuration.GetValue<int>("endpoint:port");
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)

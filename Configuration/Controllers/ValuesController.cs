@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace Configuration.Controllers
 {
@@ -11,7 +12,7 @@ namespace Configuration.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get([FromServices] IOptions<Endpoint> options)
         {
             return new string[] { "value1", "value2" };
         }
